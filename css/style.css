@@ -1,0 +1,17 @@
+h1 {
+    text-align: center;
+    color: red;
+
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightyellow;
+}
+p {
+    font-size: 18pt;
+    color: blue;
+    border: 1px solid grey;
+    width: 450px;
+    text-align: center;
+    background-color: lightgreen;
+}
