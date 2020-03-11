@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Bellota&display=swap&subset=cyrillic" rel="stylesheet">
+    <style>
+        
+        #a {
+            opacity: 0;
+        }
+        #a:hover {
+           opacity: 1; 
+        }
+        #but {
+            width: 300px;
+            height: 75px;
+            font-size: 30pt;
+            background-color:aqua ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            
+
+        }
+        #q, #a {
+            font-size: 20pt;
+        }
+        /* #q {
+            align-self: start;
+        }
+        #a {
+            align-self: center;
+        }
+        #but {
+            align-self: flex-end;
+        } */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Bellota', cursive;
+        }
+        section {
+            width: 300px;
+            height: 223px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between ;
+            
+        }
+        #b {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <section>
+    <div id="q"></div>
+    <div id="b">
+    <div id="a"></div>
+    </div>
+    <div id="but" onclick="g(1, r.length)">New Word</div>
+</section>
+    <script>
+        
+        e = ["be fighting fit", "be in good / bad shape", "be on the mend", "get back into shape", "go down with something", "have a new lease of life", "look the picture of health", "look / be under the weather"]
+        r = ["в хорошей форме", "быть в хорошой / плохой форме", "идет на поправку", "вернуться в форму", "заболеть", "начать жизнь с чистого листа", "взглянуть на полную картину здоровья", "выглядеть / быть больным"]
+        rand = 1000
+        function g(min, max) {
+            
+            previ = rand
+            while (previ == rand) {
+            rand = min + Math.random() * (max - min);
+            rand = Math.round(rand)
+            }
+            q.innerHTML = e[rand-1]
+            a.innerHTML = r[rand-1] 
+        }
+        g(1, r.length)
+    </script>
+</body>
+</html>
