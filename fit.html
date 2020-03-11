@@ -42,8 +42,10 @@
             justify-content: center;
             align-items: center;
             font-family: 'Bellota', cursive;
-            user-select: none; 
-        }
+            user-select: none;        }
+            a{ 
+                text-decoration: none;
+            }
         section {
             width: 300px;
             height: 223px;
@@ -56,6 +58,14 @@
         #b {
             border: 1px solid black;
         }
+        .bi {
+            width: 150px;
+            height: 75px; 
+            border: 1px solid gray; 
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+            font-size: 15pt;    }
     </style>
 </head>
 <body>
@@ -64,7 +74,10 @@
     <div id="b">
     <div id="a"></div>
     </div>
-    <div id="but" onclick="g(1, r.length)">New Word</div>
+    <div id="but" >
+        <div id="n" class="bi" onclick="g(1, r.length)">New Word</div>
+        <a href="index.html"><div id="ex" class="bi">Back</div></a>
+    </div>
 </section>
     <script>
         
