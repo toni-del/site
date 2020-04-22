@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Bellota&display=swap&subset=cyrillic" rel="stylesheet">
+   <style>
+        
+        #a {
+            opacity: 0;
+            
+        }
+        #a:hover {
+           opacity: 1; 
+        }
+        #but {
+            width: 300px;
+            height: 75px;
+            font-size: 30pt;
+            background-color:aqua ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #E876E2;
+            
+
+        }
+        #q, #a {
+            font-size: 20pt;
+        }
+        /* #q {
+            align-self: start;
+        }
+        #a {
+            align-self: center;
+        }
+        #but {
+            align-self: flex-end;
+        } */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Bellota', cursive;
+            user-select: none;     
+       background-color: #FF89CA;}
+            a{ 
+                text-decoration: none;
+            }
+        section {
+            width: 300px;
+            height: 223px;
+            border: 1px solid #E87876;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between ;
+            background-color: #FF9682;
+            
+        }
+        #b {
+            border: 1px solid #E87876;
+        }
+        .bi {
+            width: 150px;
+            height: 75px; 
+            border: 1px solid #E082FF; 
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+            font-size: 15pt;    }
+            a {
+                color: #E876E2;
+            }
+    </style>
+</head>
+<body>
+    <section>
+    <div id="q"></div>
+    <div id="b">
+    <div id="a"></div>
+    </div>
+    <div id="but" >
+        <div id="n" class="bi" onclick="g(1, r.length)">New Word</div>
+        <a href="index.html"><div id="ex" class="bi">Back</div></a>
+    </div>
+</section>
+    <script>
+        
+        e = ["ache", "bruise", "chest infection", "be congested", "cough", "cut", "feel dizzy", "feel fatigued", "flu", "fracture", "heartburn", "insect string", "feel nauseous", "nose bleed", "rash", "sore throat", "sprain", "feel stiff", "be swollen", "temperature", "virus", "wound", "antacid", "antibiotics", "antihistamine", "anti-inflammatories", "antiseptic cream", "bandage", "cough medicine", "lots of liquids", "painkillers", "rest", "tablets", "throat sweets", "X-ray"]
+        r = [«боль», «синяк», «инфекция грудной клетки», «быть перегруженным», «кашель», «порез», «чувствовать головокружение», «чувствовать усталость», «грипп», «перелом», «изжога», «» "насекомые", "тошнота", "носовое кровотечение", "сыпь", "боль в горле", "растяжение связок", "ощущение жесткости", "опухание", "температура", "вирус", "рана", " антацид »,« антибиотики »,« антигистаминный »,« противовоспалительный »,« антисептический крем »,« повязка »,« лекарство от кашля »,« много жидкости »,« обезболивающие »,« покой »,« таблетки »,« горловые конфеты »,« Рентген »]
+        rand = 1000
+        function g(min, max) {
+            
+            previ = rand
+            while (previ == rand) {
+            rand = min + Math.random() * (max - min);
+            rand = Math.round(rand)
+            }
+            q.innerHTML = e[rand-1]
+            a.innerHTML = r[rand-1] 
+        }
+        g(1, r.length)
+    </script>
+</body>
+</html>
