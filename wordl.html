@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Bellota&display=swap&subset=cyrillic" rel="stylesheet">
+    <style>
+        
+        #a {
+            opacity: 0;
+            
+        }
+        #a:hover {
+           opacity: 1; 
+        }
+        #but {
+            width: 300px;
+            height: 75px;
+            font-size: 30pt;
+            background-color:aqua ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #E876E2;
+            
+
+        }
+        #q, #a {
+            font-size: 20pt;
+        }
+        /* #q {
+            align-self: start;
+        } Степа дурак
+        #a {
+            align-self: center;
+        }
+        #but {
+            align-self: flex-end;
+        } */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Bellota', cursive;
+            user-select: none;    background-color: #FF89CA;    }
+            a{ 
+                text-decoration: none;
+            }
+        section {
+            width: 300px;
+            height: 223px;
+            border: 1px solid #E87876;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between ;
+            background-color: #FF9682;
+            
+        }
+        #b {
+            border: 1px solid #E87876;
+        }
+        .bi {
+            width: 150px;
+            height: 75px; 
+            border: 1px solid #E082FF; 
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+            font-size: 15pt;    }
+            a {
+                color: #E876E2;
+            }
+    </style>
+</head>
+<body>
+    <section>
+    <div id="q"></div>
+    <div id="b">
+    <div id="a"></div>
+    </div>
+    <div id="but" >
+        <div id="n" class="bi" onclick="g(1, r.length)">New Word</div>
+        <a href="index.html"><div id="ex" class="bi">Back</div></a>
+    </div>
+</section>
+
+    <script>
+        
+        r = ["absent-minded", "ache", "ache", "addictive", "adrenaline", "antacid", "antibiotics", "antihistamine", "anti-inflammatories", "antiseptic cream", "attend a fitness class", "badly paid", "bandage", "be competitive", "beat an opponent", "bruise", "burn", "burst", "calcium", "calories", "carbohydrate", "cheap", "chest infection", "cholesterol", "(be) congested", "convenient", "convert", "cough", "couh medicine", "cut", "dairy products", "densely populated", "(feel) dizzy", "do aerobics", "energy", "English-speaking", "expensive", "far-reaching", "fat", "(feel) fatigued", "fever", "fibre", "flu", "fracture", "free choise", "fresh", "go running", "heartburn", "high-calorie", "highly paid", "ingredient", "insect sting", "intensity", "keep fit", "lift weights", "light-hearted", "lots of liquid", "low-calories", "mineral", "mouth-watering", "much-needed", "(feel) nauseous", "nose bleed", "nutrient", "nuts", "oil", "old-fashioned", "painkillers", "pedal on a bike", "penicillin", "play a team sport", "poultry", "preservative", "processed", "processed food", "processed meat", "protein", "pump", "push myself to the limit", "rash", "record-breakinhg", "rest", "salt", "seeds", "sore throat", "sprain", "(feel) stiff", "sugar", "(be) swollen", "tablets", "tasty", "temperature", "throat sweets", "time-saving", "value for money", "virus", "vitamins", "well-respected", "well-written", "wholegrain", "will power", "wound", "X-ray"]
+        e = ["рассеянный", "боль", "боль", "привыкание", "адреналин", "антацид", "антибиотики", "антигистамин", "противовоспалительные средства", "антисептический крем", "посещать занятия фитнесом "," плохо оплачиваемый "," бинт "," будь конкурентоспособным "," побей соперника "," ушиб "," сожги "," взрыв "," кальций "," калории "," углеводы "," дешево ", "инфекция грудной клетки", "холестерин", "перегруженный", "удобный", "конвертировать", "кашель", "лекарство от кашля", "резать", "молочные продукты", "густонаселенный", "(чувствовать ) головокружение "," делать аэробику "," энергия "," англоговорящий "," дорогой "," далеко идущий "," толстый "," (чувствовать) усталость "," лихорадка "," клетчатка "," грипп " "," перелом "," свободный выбор "," свежий "," беги "," изжога "," высококалорийный "," высокооплачиваемый "," ингредиент "," укус насекомого "," интенсивность "," держать " в форме »,« поднимать тяжести »,« беззаботный »,« много жидкости »,« низкокалорийный »,« минеральный »,« аппетитный »,« очень необходимый »,« (чувствовать) тошнотворный »,« кровотечение из носа »,« питательное вещество »,« орехи »,« масло »,« старомодный »,« болеутоляющие »,« педаль на велосипеде »,« пенициллин »,« играть в команду з ort "," домашняя птица "," консервант "," обработанный "," обработанная пища "," обработанное мясо "," белок "," насос "," выдвинь себя до предела "," сыпь "," рекорд-разрыв " , "отдых", "соль", "семена", "боль в горле", "растяжение связок", "(ощущение) жесткой", "сахар", "быть опухшими", "таблетки", "вкусно", "температура "," горловые конфеты "," экономия времени "," соотношение цены и качества "," вирус "," витамины "," уважаемый "," хорошо написанный "," цельнозерновой "," сила воли "," рана " ", "Рентгеновский"]
+        rand = 1000
+        function g(min, max) {
+            
+            previ = rand
+            while (previ == rand) {
+            rand = min + Math.random() * (max - min);
+            rand = Math.round(rand)
+            }
+            q.innerHTML = e[rand-1]
+            a.innerHTML = r[rand-1] 
+        }
+        g(1, r.length)
+    </script>
+</body>
+</html>
