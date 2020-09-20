@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Bellota&display=swap&subset=cyrillic" rel="stylesheet">
+    <style>
+        
+        #a {
+            opacity: 0;
+            
+        }
+        #a:hover {
+           opacity: 1; 
+        }
+        #but {
+            width: 300px;
+            height: 75px;
+            font-size: 30pt;
+            background-color:aqua ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #E876E2;
+            
+
+        }
+        #q, #a {
+            font-size: 20pt;
+        }
+        /* #q {
+            align-self: start;
+        } Степа дурак
+        #a {
+            align-self: center;
+        }
+        #but {
+            align-self: flex-end;
+        } */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Bellota', cursive;
+            user-select: none;    background-color: #FF89CA;    }
+            a{ 
+                text-decoration: none;
+            }
+        section {
+            width: 300px;
+            height: 223px;
+            border: 1px solid #E87876;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between ;
+            background-color: #FF9682;
+            
+        }
+        #b {
+            border: 1px solid #E87876;
+        }
+        .bi {
+            width: 150px;
+            height: 75px; 
+            border: 1px solid #E082FF; 
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+            font-size: 15pt;    }
+            a {
+                color: #E876E2;
+            }
+    </style>
+</head>
+<body>
+    <section>
+    <div id="q"></div>
+    <div id="b">
+    <div id="a"></div>
+    </div>
+    <div id="but" >
+        <div id="n" class="bi" onclick="g(1, r.length)">New Word</div>
+        <a href="index.html"><div id="ex" class="bi">Back</div></a>
+    </div>
+</section>
+
+    <script>
+        
+        r = ["name", "surname", "patronymie", "was born", "into the family of a ...", "years old", "pupil", "student", "father", "mother", "sister", "brother", "aunt", "uncle", "nephew", "grandmother", "grandfather", "parents", "on pension", "work as a ...", "worker", "engineer", "nurse", "daughter", "son", "kindergarten", "occupation", "first-year student", "live", "leave (finish) school", "graduate from", "enter", "vocational school", "children", "birthday", "age", "address", "hobby", "subject", "favourite", "go in for sports", "be good at", "like (love)", "enjoy", "dance", "music", "united", "in the morning", "in the evening", "relatives", "junior", "older (elder)", " young", "be fond of", "dream", "become", "consist of", "senior", "plant", "factory", "busy", "entrance exams", "applicant for entry", "friend", "favourite pastime", "play the guitar", "lyceum"]
+        e = ["имя", "фамилия", "отчество", "родился", " в семье ...", "лет", "ученик", "студент", "отец", "мать", "сестра", "брат", "тетя", "дядя", "племянник", "бабушка", "дедушка", "родители", "на пенсии", " работаю в качестве ...", "рабочий", "инженер", "медсестра", "дочь", "сын", "детский сад", "профессия", "первокурсник", "жить", "оставить (закончить) школу", "окончить", "поступить", "профессиональное училище", "дети", "день рождения", "возраст", "адрес", "хобби", "предмет", "любимый", "заниматься спортом", "быть хорошим", "любить (любить)", "наслаждаться", "танцевать", "музыка", "объединяться"., "утром", "вечером", "родственники", "младший", "старший (старший)", "молодой", "увлекайся", "мечтай", "становись", "состой", "старший", "завод", "фабрика", "занят", "вступительные экзамены", "абитуриент на поступление", "друг", "любимое занятие", "играй на гитаре", "лицей"]
+        rand = 1000
+        function g(min, max) {
+            
+            previ = rand
+            while (previ == rand) {
+            rand = min + Math.random() * (max - min);
+            rand = Math.round(rand)
+            }
+            q.innerHTML = e[rand-1]
+            a.innerHTML = r[rand-1] 
+        }
+        g(1, r.length)
+    </script>
+</body>
+</html>
