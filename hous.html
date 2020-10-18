@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Bellota&display=swap&subset=cyrillic" rel="stylesheet">
+   <style>
+        
+        #a {
+            opacity: 0;
+            
+        }
+        #a:hover {
+           opacity: 1; 
+        }
+        #but {
+            width: 300px;
+            height: 75px;
+            font-size: 30pt;
+            background-color:aqua ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #E876E2;
+            
+
+        }
+        #q, #a {
+            font-size: 20pt;
+        }
+        /* #q {
+            align-self: start;
+        }
+        #a {
+            align-self: center;
+        }
+        #but {
+            align-self: flex-end;
+        } */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Bellota', cursive;
+            user-select: none;     
+       background-color: #FF89CA;}
+            a{ 
+                text-decoration: none;
+            }
+        section {
+            width: 300px;
+            height: 223px;
+            border: 1px solid #E87876;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between ;
+            background-color: #FF9682;
+            
+        }
+        #b {
+            border: 1px solid #E87876;
+        }
+        .bi {
+            width: 150px;
+            height: 75px; 
+            border: 1px solid #E082FF; 
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+            font-size: 15pt;    }
+            a {
+                color: #E876E2;
+            }
+    </style>
+</head>
+<body>
+    <section>
+    <div id="q"></div>
+    <div id="b">
+    <div id="a"></div>
+    </div>
+    <div id="but" >
+        <div id="n" class="bi" onclick="g(1, r.length)">New Word</div>
+        <a href="index.html"><div id="ex" class="bi">Back</div></a>
+    </div>
+</section>
+    <script>
+        
+        e = ["advantage", "attic", "basement", "brick", "carpet", "ceiling", "central heating", "cluttered", "conveniences", "cooling", "detached (house)", "disadvantage", "downstairs", "electricity", "estate agent", "fireplace", "haunted house", "haven", "item", "lack", "laundary basket", "look onto", "lounge", "microwave", "modern", "mobe house", "owner", "period", "privacy", "radiator", "renovation", "rent", "repair", "responsible", "restore", "semi-detached (house)", "settee", "share", "shower", "space", "spacious", "suitable", "tap", "terraced (house)", "tiles", "treasured", " underneath", "upkeep", "upstairs", "water supply", "cottage", "bungalow", "mansion", "maisonette", "a block of flats", "neighbour", "garage", "staircase", "conditioner", "a dining room", "a kitchen", "wall", "spacious", "huge", "in the centre of the house", "on/to the left", "in the corner", "fence"]
+        r = [«преимущество», «чердак», «подвал», «кирпич», «ковровое покрытие», «потолок», «центральное отопление», «захламленный», «удобства», «охлаждение», «отдельно стоящий (дом)», «недостаток» "," внизу "," электричество "," агент по недвижимости "," камин "," дом с привидениями "," убежище "," предмет "," недостаток "," корзина для белья "," взгляд на "," гостиная ", "микроволновая печь", "модерн", "дом-моб", "владелец", "период", "конфиденциальность", "радиатор", "ремонт", "аренда", "ремонт", "ответственный", "восстановление", " двухквартирный (дом) »,« диван »,« доля »,« душ »,« просторный »,« просторный »,« подходящий »,« кран »,« террасный (дом) »,« плитка »,« заветный » , «внизу», «ремонт», «наверху», «водоснабжение», «коттедж», «бунгало», «особняк», «мезонет», «многоквартирный дом», «сосед», «гараж», » лестница »,« кондиционер »,« столовая »,« кухня »,« стенка »,« просторная »,« огромная »,« в центре дома »,« слева / слева »,« в угол »,« забор »]
+        rand = 1000
+        function g(min, max) {
+            
+            previ = rand
+            while (previ == rand) {
+            rand = min + Math.random() * (max - min);
+            rand = Math.round(rand)
+            }
+            q.innerHTML = e[rand-1]
+            a.innerHTML = r[rand-1] 
+        }
+        g(1, r.length)
+    </script>
+</body> 
+</html>
